@@ -1,2 +1,0 @@
-
-print(max_num)

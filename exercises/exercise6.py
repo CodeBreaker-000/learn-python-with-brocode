@@ -1,25 +1,18 @@
-# Python Calculator
+# Validate user inout exercise
+# 1. username is no more than 12 characters
+# 2. username must not contain spaces
+# 3. username must not contain digits
 
-operator = input("Enter an operator (+ - * /): ")
-num1 = float(input("Enter the 1st number: "))
-num2 = float(input("Enter the 2nd number: "))
 
-if operator == '+':
-    result = num1 + num2
-    print(round(result, 3))
-elif operator == '-':
-    result = num1 - num2
-    print(round(result, 3))
-elif operator == '*':
-    result = num1 * num2
-    print(round(result, 3))
-elif operator == '/':
-    result = num1 / num2
-    print(round(result, 3))
+username = input("Enter a username: ")
+
+if len(username) > 12:
+    print("Your username can't be more than 12 characters")
+elif not username.find(" ") == -1:
+    print("Your username can't contain spaces")
+elif not username.isalpha():
+    print("Your username can't contain numbers")
 else:
-    print(f"{operator} is not a valid operator")
-
-
-
+    print(f"Welcome {username}")
 
 

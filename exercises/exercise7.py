@@ -1,16 +1,16 @@
-# Python Weight Converter
+# 2D Keypad
 
-weight = float(input("Enter your weight: "))
-unit = input("Kilograms or Pounds? (K or L): ")
+num_pad = ((1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#"))
 
-if unit == "K":
-    weight = weight * 2.205
-    unit = "Lbs."
-    print(f"Your weight is: {round(weight, 2)} {unit}")
-elif unit == "L":
-    weight = weight / 2.205
-    unit = "Kgs."
-    print(f"Your weight is: {round(weight, 2)} {unit}")
-else:
-    print(f"{unit} was not valid") 
+for row in num_pad:
+    # print(row)
+    for num in row:
+        print(num, end=" ")
+    print()
+
+
+
 
